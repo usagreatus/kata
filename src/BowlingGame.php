@@ -42,7 +42,7 @@ class BowlingGame
 
         foreach (range(1, self::FRAMES_PER_GAME) as $frame) {
             if ($this->isStrike($roll)) {
-                $score = $this->pinCount($roll) + $this->strikeBonus($roll);
+                $score += $this->pinCount($roll) + $this->strikeBonus($roll);
                 $roll += 1;
                 continue;
             }
